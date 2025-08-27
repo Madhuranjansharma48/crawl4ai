@@ -1,5 +1,5 @@
-1
-Initialize a Local Git Repository
+
+##Initialize a Local Git Repository
 
 If you already have a project folder on your computer, navigate to it using the terminal:
 
@@ -10,7 +10,7 @@ Then initialize Git:
 
 git init
 
-3. Add GitHub Repository as Remote
+## Add GitHub Repository as Remote
 
 Copy the repository URL from GitHub (HTTPS or SSH). Then:
 
@@ -21,7 +21,7 @@ Check if the remote was added:
 
 git remote -v
 
-4. Add Files to Git
+## Add Files to Git
 
 Add all your files to the staging area:
 
@@ -30,13 +30,13 @@ git add .
 
 Note: . means all files. You can also add specific files like git add index.html.
 
-5. Commit Changes
+## Commit Changes
 
 Commit your staged files with a message:
 
 git commit -m "Initial commit"
 
-6. Push to GitHub
+## Push to GitHub
 
 Finally, push your code to GitHub:
 
@@ -151,38 +151,6 @@ Response (JSON example):
   ...
 ]
 
-2. Example Node.js + Express Implementation
-const express = require("express");
-const app = express();
-app.use(express.json());
-
-// Mock data (replace with database query)
-const cases = [
-  { caseId: "1", title: "Reddy vs State", state: "KARNATAKA", commission: "Bangalore 1st & Rural Additional", date: "2025-08-27" },
-  { caseId: "2", title: "Sharma vs State", state: "KARNATAKA", commission: "Bangalore 2nd", date: "2025-08-20" },
-  { caseId: "3", title: "Reddy vs India", state: "KARNATAKA", commission: "Bangalore 1st & Rural Additional", date: "2025-08-15" }
-];
-
-app.post("/case-search", (req, res) => {
-  const { state, commission, searchValue } = req.body;
-
-  if (!state || !commission || !searchValue) {
-    return res.status(400).json({ error: "state, commission, and searchValue are required" });
-  }
-
-  const results = cases.filter(
-    c =>
-      c.state.toLowerCase() === state.toLowerCase() &&
-      c.commission.toLowerCase() === commission.toLowerCase() &&
-      c.title.toLowerCase().includes(searchValue.toLowerCase())
-  );
-
-  res.json(results);
-});
-
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
-});
 
 ✅ Key Notes
 
