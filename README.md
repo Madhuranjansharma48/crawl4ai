@@ -75,9 +75,8 @@ Accepting both JSON body and query params is possible, but usually POST with JSO
 
 If you want, I can also write the MongoDB version of this endpoint that queries a real database collection instead of using mock data.
 
-Do you want me to do that?
+## project setup
 
-You said:
 1 pip install crawl4ai
 2 crawl4ai-setup
 3 python3 main.py
