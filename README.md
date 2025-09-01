@@ -84,31 +84,7 @@ curl -X POST "http://localhost:8000/products/" \
 
 
 
-## Connect to GitHub
 
-Go to GitHub → create a new repository (skip README if you want VS Code to handle it).
-
-Copy the repository URL.
-
-In VS Code terminal (Ctrl+` / Cmd+`):
-
-git remote add origin https://github.com/username/my-project.git
-git branch -M main
-git push -u origin main
-
-## Push from VS Code
-
-Alternatively, after adding the remote, you can click the … → Push button in the Source Control panel.
-
-✅ Your project is now on GitHub directly from VS Code!
-
-If you want, I can make a super-simple VS Code workflow cheat sheet with exact buttons and commands to copy-paste for GitHub. It’s very handy. Do you want me to make it?
-
-You said:
-Each case-search endpoint should accept (via JSON body or query params):
-State (text, e.g., "KARNATAKA")
-Commission (text, e.g., "Bangalore 1st & Rural Additional")
-Search Value (string, e.g., "Reddy")
 
 
 
@@ -150,15 +126,6 @@ Response (JSON example):
 ]
 
 
-✅ Key Notes
-
-Make the search case-insensitive (toLowerCase() in filter).
-
-You can later replace cases array with a database query (MongoDB, PostgreSQL, etc.).
-
-Accepting both JSON body and query params is possible, but usually POST with JSON body is cleaner for search filters.
-
-If you want, I can also write the MongoDB version of this endpoint that queries a real database collection instead of using mock data.
 
 ## project setup
 
@@ -173,7 +140,7 @@ If you want, I can also write the MongoDB version of this endpoint that queries 
 
 
 
-Got it 👍 You want me to prepare a README.md file for your project that explains all the steps clearly. Here’s a clean version you can copy-paste into your GitHub repo:
+
 
 # Crawl4AI Project
 
